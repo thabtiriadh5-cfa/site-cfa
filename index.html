@@ -6,7 +6,7 @@
 <title>Centre de Formation et d’Apprentissage de Msaken | Formations et annonces</title>
 <meta name="description" content="Centre de Formation et d’Apprentissage de Msaken : soudure, maintenance industrielle, électricité, aluminium et PVC. Annonces pour les stagiaires.">
 <style>
-:root{--acier:#16324f;--nuit:#0e1f33;--jaune:#f2b705;--fond:#f4f6f8;--texte:#1b2430;--gris:#5b6675;--blanc:#fff}
+:root{--acier:#003c71;--nuit:#002b52;--jaune:#ffcc00;--rose:#d6275f;--turq:#178a8a;--fond:#f4f6f8;--texte:#1b2430;--gris:#5b6675;--blanc:#fff}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:70px}
 body{margin:0;font-family:"Segoe UI",Tahoma,Arial,sans-serif;color:var(--texte);background:var(--fond);line-height:1.6}
@@ -17,15 +17,17 @@ header.top{position:sticky;top:0;z-index:5;background:var(--nuit);color:var(--bl
 header.top .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px 24px;padding-top:10px;padding-bottom:10px}
 .marque{font-weight:700;text-decoration:none;font-size:1.05rem}
 nav a{display:inline-block;padding:6px 10px;text-decoration:none;font-size:.95rem}
-nav a:hover{color:var(--jaune)}
-.hero{background:var(--acier);color:var(--blanc);padding:64px 0 56px;border-bottom:10px solid var(--jaune)}
+nav a:hover{box-shadow:inset 0 -3px 0 var(--rose)}
+.hero{background:linear-gradient(135deg,#003c71,#00568f);color:var(--blanc);padding:64px 0}
 .hero h1{margin:0 0 6px;font-size:clamp(1.9rem,5vw,3.1rem);line-height:1.15;max-width:18ch}
 .hero .ar{font-size:clamp(1.2rem,3vw,1.7rem);margin:0 0 20px;opacity:.9}
 .hero p.intro{max-width:60ch;font-size:1.1rem;margin:0 0 26px}
-.btn{display:inline-block;background:var(--jaune);color:var(--nuit);font-weight:700;padding:12px 22px;text-decoration:none;border-radius:4px;margin-right:10px}
+.btn{display:inline-block;background:var(--rose);color:#fff;font-weight:700;font-size:1.05rem;padding:14px 28px;text-decoration:none;border-radius:14px;margin:0 10px 10px 0;border:2px solid var(--rose)}
+.btn:hover{filter:brightness(1.1)}
 .btn.sec{background:transparent;color:var(--blanc);border:2px solid var(--blanc)}
 section{padding:54px 0}
 section h2{margin:0 0 8px;font-size:1.8rem;color:var(--acier)}
+section h2::after{content:"";display:block;width:56px;height:4px;background:var(--rose);margin-top:8px}
 section .lead{margin:0 0 28px;color:var(--gris);max-width:62ch}
 .formations{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
 .formation{background:var(--blanc);border-left:6px solid var(--acier);padding:16px 18px;border-radius:0 4px 4px 0}
@@ -44,16 +46,36 @@ section .lead{margin:0 0 28px;color:var(--gris);max-width:62ch}
 .contact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:28px}
 .contact-grid p{margin:0 0 10px}
 .contact-grid strong{display:block;color:var(--acier)}
-.horaire{background:var(--blanc);padding:20px 22px;border-top:6px solid var(--jaune)}
+.horaire{background:var(--blanc);padding:20px 22px;border-top:6px solid var(--rose)}
 footer{background:var(--nuit);color:#cfd8e3;padding:26px 0;font-size:.92rem}
 footer p{margin:0 0 4px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 .logos{background:#fff;border-bottom:1px solid #d9dee5}
 .logos .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-top:10px;padding-bottom:10px}
 .logos img{height:64px;width:auto;max-width:45%}
+.infobar{background:var(--nuit);color:#fff;font-size:.85rem}
+.infobar .wrap{display:flex;flex-wrap:wrap;justify-content:center;gap:4px 28px;padding-top:7px;padding-bottom:7px}
+.infobar a{text-decoration:none}
+.tuiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:28px}
+.tuile{position:relative;overflow:hidden;display:block;min-height:130px;padding:26px 20px;border-radius:8px;color:#fff;text-decoration:none;font-weight:700;font-size:1.25rem}
+.tuile small{display:block;margin-top:6px;font-size:.88rem;font-weight:400}
+.tuile:hover{filter:brightness(1.1)}
+.t-bleu{background:var(--acier)}
+.t-turq{background:var(--turq)}
+.t-rose{background:var(--rose)}
+.t-jaune{background:var(--jaune);color:var(--nuit)}
+.ruban{position:absolute;top:16px;right:-34px;transform:rotate(45deg);background:var(--rose);color:#fff;font-size:.62rem;letter-spacing:.04em;padding:3px 36px}
 </style>
 </head>
 <body>
+
+<div class="infobar">
+  <div class="wrap">
+    <span>Route de Wardanine, km 2,5, Msaken</span>
+    <a href="tel:+21673290812">Tél. 73 290 812</a>
+    <span>Ouvert de 8h à 17h</span>
+  </div>
+</div>
 
 <div class="logos">
   <div class="wrap">
@@ -83,6 +105,13 @@ footer p{margin:0 0 4px}
     <a class="btn" href="#formations">Voir les formations</a>
     <a class="btn sec" href="#annonces">Lire les annonces</a>
   </div>
+</div>
+
+<div class="wrap tuiles">
+  <a class="tuile t-bleu" href="#formations">Formations<small>7 spécialités</small></a>
+  <a class="tuile t-turq" href="#annonces"><span class="ruban">À LA UNE</span>Annonces<small>Avis aux stagiaires</small></a>
+  <a class="tuile t-rose" href="#contact">Inscriptions<small>Renseignez-vous auprès de l’administration</small></a>
+  <a class="tuile t-jaune" href="https://www.google.com/maps/search/?api=1&query=Route+de+Wardanine+Msaken" target="_blank" rel="noopener">Nous trouver<small>Voir sur Google Maps</small></a>
 </div>
 
 <section id="formations">
